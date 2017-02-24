@@ -17,9 +17,9 @@ function Player(name, life, power, counter){
 
 // Creating the players from the constructor
 var firstPlayer = new Player("Obi-Wan Kenobi", 110, 15, 10),  // name, hp, power, counter
-	secondPlayer = new Player("Luke SKy Walker", 100, 10, 9); // name, hp, power, counter
-	thirdPlayer = new Player("Darth Sidius", 120, 17, 5), // name, hp, power, counter
-	fourthPlayer = new Player("Darth Maul", 150, 9, 2); // name, hp, power, counter
+	var secondPlayer = new Player("Luke SKy Walker", 100, 10, 9); // name, hp, power, counter
+	var thirdPlayer = new Player("Darth Sidius", 120, 17, 5), // name, hp, power, counter
+	 var fourthPlayer = new Player("Darth Maul", 150, 9, 2); // name, hp, power, counter
 
 
 
