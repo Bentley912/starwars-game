@@ -2,7 +2,7 @@
 
 
 
-
+	$('.alert').hide();
 // Main constructor for all the players
 function Player(name, life, power, counter){
 	this.name = name,
@@ -16,10 +16,10 @@ function Player(name, life, power, counter){
 
 
 // Creating the players from the constructor
-var firstPlayer = new Player("Obi-Wan Kenobi", 110, 15, 10),  // name, hp, power, counter
-	var secondPlayer = new Player("Luke SKy Walker", 100, 10, 9); // name, hp, power, counter
-	var thirdPlayer = new Player("Darth Sidius", 120, 17, 5), // name, hp, power, counter
-	 var fourthPlayer = new Player("Darth Maul", 150, 9, 2); // name, hp, power, counter
+var firstPlayer = new Player("Obi-Wan Kenobi", 110, 20, 10);  // name, hp, power, counter
+	 secondPlayer = new Player("Luke SKy Walker", 100, 10, 9); // name, hp, power, counter
+	 thirdPlayer = new Player("Darth Sidius", 100, 8, 3); // name, hp, power, counter
+	  fourthPlayer = new Player("Darth Maul", 100, 9, 2); // name, hp, power, counter
 
 
 
@@ -36,7 +36,7 @@ function output() {
 	// Grabbing the elements from the DOM
 	var lives = $(".hp");
 	var names = $(".name");
-	var counter = $(".counter");
+	var counter = $(".counterAttack");
 	var attack = $(".attackPower")
 
 
@@ -44,8 +44,8 @@ function output() {
 	// Putting elements to the DOM
 	players.map(function(e, index){
 		$(lives[index]).html(e.hp);
-		$(names[index]).html(e.name);
-		$(counter[index]).html(e.counter);
+		$(names[index]).append(e.name);
+		$(counter[index]).append(e.counter);
 		$(attack[index]).html(e.power);
 	});
 } // end of the ouput function
@@ -91,22 +91,37 @@ $('.character').on('click', function() {
              console.log("Enemy's Result HP: " + myAttack);
 
 						 //grab enemy Attack
-						 var enemy = ($('.enemyZone .character .attackPower').html());
+						 var enemy = ($('.enemyZone .character .counterAttack').html());
 						 var myHp = ($('.myPlayerZone .character .hp').html());
 						 var enemyAttack = myHp -= enemy;
 
 						 var playerUpdate = $('.myPlayerZone .character .hp').html(enemyAttack);
              var enemyUpdate = $('.enemyZone .character .hp').html(myAttack);
-             console.log(enemyUpdate)
+             console.log(enemyUpdate);
+
+						 $("#enemyInfo").empty();
+						 var enemyName = ($('.enemyZone .character .name').html());
+
 
          }
+
 				 if (enemyHp <= 0){
-					 console.log("Player Wins!!");
+
 					 $('.enemyZone').empty();
 				 }
+
 				 else if(myHp <= 0 ){
-					 $('.myPlayerZone').html("<h1>Player Loses</h1>");
+
+					 $('.myPlayerZone').empty();
+					 $('.myPlayerZone').append("<h1>Player Loses</h1>");
 				 }
+
+				 else if ($('.mainCharacter').html().trim() == ''){
+						 $('.alert').show();
+						 $('.alert').html("<h1>All Enemies are Vanquished</h1>");
+				 }
+
+
      });
 
 

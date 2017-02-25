@@ -1,7 +1,11 @@
 body {
     background-image: url("../images/starwars.jpg");
+		margin:auto;
 }
 
+.container{
+	margin:auto 0;
+}
 
 *{
 	padding: 0;
@@ -17,11 +21,26 @@ button{
 	outline: none;
 	cursor: pointer;
 }
+#title{
+	font-family: 'Faster One', cursive;
+	color:white;
+	font-size:7.5em;
+}
 
+#title2{
+	font-family: 'Faster One', cursive;
+	color:white;
+	font-size:3.5em;
+}
 .myPlayerZone{
 	width:500px;
 	height: 150px;
-	background:lightgrey;
+	margin: auto;
+}
+
+.myPlayerZone h1{
+	font-size:3em;
+	color:red;
 }
 .mainCharacter{
 	display: flex;
@@ -68,7 +87,8 @@ button{
 .enemyZone{
 	width:500px;
 	height: 150px;
-	background:grey;
+
+	margin:auto;
 }
 
 .counter, .attackPower{
@@ -78,4 +98,24 @@ button{
 .character img {
 	width:6em;
 	height: 6em;
+}
+button{
+	margin:auto;
+}
+
+.hp, .counter, .attackPower, .counterAttack{
+	color:white;
+}
+
+.alert{
+	background-color: red;
+	width:75%;
+	height:10em;
+	margin:auto;
+	text-align: center;
+}
+
+.alert h1{
+	font-family: 'Faster One', cursive;
+	font-size:2em;
 }

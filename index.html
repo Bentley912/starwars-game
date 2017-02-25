@@ -6,13 +6,20 @@
 
 	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
 <section class="container">
+	<h1 id="title">Star Wars Game</h1>
 
-	<div class="myPlayerZone">
+	<h1 id="title2"> Pick Your Character:</h1>
+<div class="alert">
+
+</div>
+
+<div class="myPlayerZone">
 
 	</div>
 
@@ -21,7 +28,7 @@
 
 
 		<div class="character ">
-			<p class="name">Obi-Wan Kenobi</p>
+			<p class="name"></p>
 			<div class="img green">
 					<img src="assets/images/ObiWan_hood.png" />
 			</div>
@@ -33,7 +40,7 @@
 
 
 		<div class="character"
-			<p class="name">Luke Sky Walker</p>
+			<p class="name"></p>
 			<div class="img red">
 				<img src="assets/images/luke.png" />
 			</div>
@@ -45,7 +52,7 @@
 
 
 		<div class="character ">
-			<p class="name">Darth Sidious</p>
+			<p class="name"></p>
 			<div class="img yellow">
 				<img src="assets/images/darth_sid.png" />
 			</div>
@@ -57,7 +64,7 @@
 
 
 		<div class="character ">
-			<p class="name">Darth Maul</p>
+			<p class="name"></p>
 			<div class="img blue">
 				<img src="assets/images/darth_maul.png" />
 			</div>
@@ -77,7 +84,7 @@
 
 	</div>
 
-<p>You attacked Darth Maul for 8 damage</p>
+<p>You attacked <span id = "enemyInfo">Darth Maul</span> for 8 damage</p>
 <p>Darth Maul attacked you back for 25 damage</p>
 
 <button id="restart">Restart Game</button>
